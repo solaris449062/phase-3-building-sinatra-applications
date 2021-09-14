@@ -9,3 +9,10 @@ task :console do
   # Open a Pry session
   Pry.start
 end
+
+desc "Start the server"
+task :server do
+  # start the server
+  exec "rerun -b 'rackup config.ru'"
+  # bundle exec rake server
+end
